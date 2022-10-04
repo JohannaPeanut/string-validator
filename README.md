@@ -1,7 +1,7 @@
 # String Validator and Parser
 
 ## Validation
-- phone numbers
+- phone number
 - email adresses
 - passwords (with options?)
 - booking number
@@ -17,13 +17,13 @@
 - date?
     - 1. dd/mm/yyyy or dd-mm-yyyy format.
     - 2. mm/dd/yyyy or mm-dd-yyyy format.
-    - older than X ?
--and-
+
 ## Parser
 - to camelCase
 - to spiral-case
 - to PascalCase
 - correct whitespaces after punctuation, double, begin, end
+- Date --> Age
 
 ## Count
 - characters (with/without spaces)
@@ -31,3 +31,22 @@
 - vowels
 
 ## Request Handlers
+
+### '/validation'
+- POST - '/email' - validate email
+- POST - '/tel' - phone number
+- POST - '/date' - validate date 
+- POST - '/credit' - creditcard no - with options
+- POST - '/password' - password - with options
+
+### '/parse'
+- POST - '/camel' - to camelCase
+- POST - '/spiral' - to spiral-case
+- POST - '/pascal' - to PascalCase
+- POST - '/correct' - correct whitespaces after punctuation, double, begin, end
+- POST - '/age' - Date --> Age
+
+### '/count'
+- POST - '/chars' - characters (with/without spaces)
+- POST - '/words' - words
+- POST - '/vowels' - vowels

@@ -2,11 +2,15 @@
 
 const express = require('express');
 
-const router = express.Router();
+const router = new express.Router();
 
-// - GET - / - Lists houses and profiles. ({ houses: [], profiles: [] })
-router.get('/', (req, res, next) => {
-  res.send('Hello Validation')
+//- POST - '/date' - validate date 
+router.post('/date', (req, res, next) => {
+ const {input} = req.body
+ console.log(req.body)
+ const regexDate = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/
+ console.log(regexDate.test(input))
+  res.json({result: regexDate.test(input)})
 });
 
 module.exports = router;
